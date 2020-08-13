@@ -50,6 +50,7 @@ a.boxclose {
 </head>
 <body>
 	<img src="images/clickme.png" onclick="doAnimateShow();">
+	<script type="text/javascript" src="jquery.js"></script>
 
 	<div class="box" id="box">
 		<a class="boxclose" id="boxclose"></a>
@@ -57,22 +58,47 @@ a.boxclose {
 		<p>Here comes a very important message for your user. Turn this
 			window off by clicking the cross.</p>
 	</div>
-
 	<script>
+		// $("#debug").text("OK");
 		function doAnimateShow() {
-			document.getElementById("box").style.left = event.clientX + "px";
-			document.getElementById("box").style.top = event.clientY + "px";
+			$("#box").css("left", event.x + "px");
+			$("#box").css("top", event.y + "px");
+
+			// document.getElementById("box").style.left = event.clientX + "px";
+			// document.getElementById("box").style.top = event.clientY + "px";
 		}
 
 		function doAnimateHide() {
-			document.getElementById("box").style.top = "-200px";
-			event.cancelBubble = true;
+			$("#box").css("top","-200px")
+			// document.getElementById("box").style.top = "-200px";
+			// event.cancelBubble = true;
+			event.stopPropagation();
 		}
 		
-		document.getElementById("boxclose").onclick = doAnimateHide;
+		// document.getElementById("boxclose").onclick = doAnimateHide;
+		$("#boxclose").on("click",doAnimateHide);
+		$(document).on("click",doAnimateShow);
+		// document.onclick = doAnimateShow;
 		
-		document.onclick = doAnimateShow;
+
+		//轉成JQ
+
+
+
+
+
+
+
+
 		
+		// $("#boxclose").on("click",function doAnimateHide() {
+		// 	doAnimateHide();
+		// })
+
+		// $(document).on("click",doAnimateShow);
+		// // document.onclick = doAnimateShow;
+		// $("#cm").on("click",doAnimateShow);
+
 	</script>
 
 </body>

@@ -165,6 +165,8 @@
     }
 
 
+
+
 4.2	寫法二:
 
     var speciesList = ["狗狗", "貓", "兔兔"];
@@ -180,3 +182,31 @@
         $(obj).data("species", speciesList[key]);
     })
 
+
+//老師操作
+
+    $(".pet").each(function (key, obj)){
+        $(obj).data("species",speciesList[key]);
+    }
+
+
+    $(".pet").each(function(x)){
+        alert();
+    }
+
+
+
+    $.each(speciesList, function(key,value){
+        $(".pet").eq(key).data('species', value);
+    })
+
+    
+    for (i in speciesList){
+        $(".pet").eq(i).data("species",speciesList[i]);
+    }
+
+
+
+    for (let i=0 ,i < speciesList.length ,i++){
+        $(".pet").eq(i).data("species",speciesList[i]);
+    }

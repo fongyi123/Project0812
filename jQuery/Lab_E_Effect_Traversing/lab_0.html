@@ -17,6 +17,7 @@
 
             <div class="col-sm-4">
                 <img id="imgDog"
+                    data-species="狗"
                      src="images/dog.jpeg"
                      class="pet img-responsive img-thumbnail"
                       />
@@ -24,6 +25,7 @@
 
             <div class="col-sm-4">
                 <img id="imgCat"
+                     data-species="貓"
                      src="images/cat.jpeg"
                      class="pet img-responsive img-thumbnail"
                       />
@@ -31,6 +33,7 @@
 
             <div class="col-sm-4">
                 <img id="imgRabbit"
+                     data-species="兔"
                      src="images/rabbit.jpeg"
                      class="pet img-responsive img-thumbnail"
                       />
@@ -82,10 +85,74 @@ $(function () {
 
     // 請接著寫作
     // Lab 程式:
+    showToast("Hint", "請點一下正確的圖案");
+    $(".pet").click(function() {
+        var species = $(this).data("species");
+        if (species != "貓") {
+            showToast("Hint","答錯了！ 我是" + species);
+            $(this).fadeOut("fast");
+        } else {
+            showToast("Note","答對了！ XD");
+            //圖片方法一：
+            // $("#imgDog").fadeTo("fast",0.5);
+            // $("#imgRabbit").fadeTo("fast",0.5);
 
+            //圖片方法二：
+            $(".pet").not("img[data-species=貓貓]").fadeTo("fast",0.5);
+        }
+            var speciesList = ["狗狗","貓","兔兔"];
+
+            // 練習方法一：
+            // $(".pet").eq(0).data("species",speciesList[0]);
+            // $(".pet").eq(1).data("species",speciesList[1]);
+            // $(".pet").eq(2).data("species",speciesList[2]);
+
+            // 練習方法二：
+            // $(".pet".eq(0)).data("species",speciesList[0]);
+            // $(".pet".eq(1)).data("species",speciesList[1]);
+            // $(".pet".eq(2)).data("species",speciesList[2]);
+
+            // 改成迴圈：
+            // for (var i = 0; i < speciesList.length; i++){
+            //     var filter =".pet:eq(" + i + ")";
+            //     $(filter).data("species",speciesList[i]);
+            // }
+
+            // 練習方法三：
+            // for (var i = 0; i < speciesList.length; i++ )
+            // {
+            //     $(".pet").eq(i).data("species",speciesList[i]);
+            // }
+
+            // 練習方法四：
+            // $(".pet").each(function(key,value){
+            //     $(obj).data("species",speciesList[key]);
+
+            // })
+
+            // 練習方法五：
+            // $(".pet").each(function(x){
+            //     alert(x);
+            // })
+
+            // 練習方法六：
+            // $.each(speciesList,function(key,value){
+            //     $(".pet").eq(key).data('species',value);
+            // })
+
+            // 練習方法七：
+            // for (i in speciesList){
+            //     $(".pet").eq(i).data("species",speciesList[i]);
+            // }
+
+            // 練習方法八：
+            for(let i = 0; i < speciesList.length; i++){
+                $(".pet").eq(i).data("species",speciesList[i]);
+            }
+
+
+    });
     
-
-
 
 
 
