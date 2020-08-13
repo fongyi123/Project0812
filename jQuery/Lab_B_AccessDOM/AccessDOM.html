@@ -10,33 +10,74 @@
                 // var x = $("report").html();
                 // alert (x);
 
+                // var x = $("report").html();
+                // alert(x);
+
+
+
                 // $("#report").html("line1<br>Line2");
                 // -->結果
                 // line1
                 // Line2
 
+                // $("#report").html("line1<br>Line2");
+
+
+
                 // $("#report").text("line1<br>Line2");
                 //line1<br>Line2-->結果
+
+                // $("#report").text("line1<br>Line2");
+
 
                 // $("#report").append("line1<br>Line2");
                 // -->結果
                 // Report:
                 // line1
                 // Line2
+
+                // $("#report").append("line1<br>Line2");
+                 // -->結果
+                // Report:
+                // line1
+                // Line2
+                // append為在所選目標標籤後面加入內容
+
+
+
                 // var s = $("#report").text();
 				        // alert(s);
-                // -->結果
-                // Report:
+                // -->結果為跳出視窗顯示
+                // Report:line1Line2
+
+                // var s = $("#report").text();
+                // alert(s);
+
+
 
                 // var s = $("#aTextField").attr("value");
                 // $("#report").append(s);
+                
+                // var s = $("aTextField").attr("value");
+                // $("#report").append(s);
+
+
 
                 // var s = $("#aTextField").prop("value");
                 // $("#report").append(s);
+                          
+                // var s = $("#aTextField").prop("value");
+                // $("report").append(s);
+
+
 
                 // var s = $("#aTextField").attr("value", "Hello!");
                 // -->結果
                 //Hello!
+
+                // var s = $("#aTextField").attr("value","Hello!");
+
+
 
                 // var s = $("input[name='radioGroup']").eq(2).attr("checked", "checked");
                 // $("#report").append("radio C selected.");
@@ -44,7 +85,8 @@
                 // Report:
                 // radio C selected.
 
-
+                vars = $("input[name='radioGroup']").eq(2).attr("check","checked");
+                $("#report").append("radio C selected.");
                 
 
                 

@@ -1,0 +1,21 @@
+明天可能考題題型:
+一、類別(class)、實體(Instance)、物件(Object)和const,let,var之間的關係和差別
+
+二、建構函式(constructor)和new,this之間的關係和用法
+https://pjchender.blogspot.com/2016/06/javascriptfunction-constructornew.html---參考網址
+
+三、shift(),unshift(),splice(),pop(),push,[length-1]老師白板上畫的圖，注意各個的用法和原理
+
+四、async和await非同步處理的原理
+https://medium.com/%E9%BA%A5%E5%85%8B%E7%9A%84%E5%8D%8A%E8%B7%AF%E5%87%BA%E5%AE%B6%E7%AD%86%E8%A8%98/%E5%BF%83%E5%BE%97-%E8%AA%8D%E8%AD%98%E5%90%8C%E6%AD%A5%E8%88%87%E9%9D%9E%E5%90%8C%E6%AD%A5-callback-promise-async-await-640ea491ea64
+
+五、MVC架構
+https://www.hellosanta.com.tw/blog/Graphical-MVC-architecture---參考網址
+
+六、
+$("#report")接.html()或.text()或append()
+$("#aTextField")接.attr()或.prop()或var()
+https://cythilya.github.io/2017/09/10/jquery-attr-vs-prop/---參考網址
+
+七、Console Class
+https://docs.microsoft.com/zh-tw/dotnet/api/system.console?view=netcore-3.1---參考網址
