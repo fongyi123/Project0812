@@ -19,3 +19,6 @@ https://cythilya.github.io/2017/09/10/jquery-attr-vs-prop/---參考網址
 
 七、Console Class
 https://docs.microsoft.com/zh-tw/dotnet/api/system.console?view=netcore-3.1---參考網址
+
+八、JavaScript 的嚴格模式 "use strict"
+https://wcc723.github.io/javascript/2017/12/15/javascript-use-strict/
